@@ -210,11 +210,11 @@ tests:
 
   - it: should create a Deployment with `progressDeadlineSeconds` if `controller.progressDeadlineSeconds` is set
     set:
-      controller.progressDeadlineSeconds: 0
+      controller.progressDeadlineSeconds: 10
     asserts:
       - equal:
           path: spec.progressDeadlineSeconds
-          value: 0
+          value: 10
 
   - it: should create a Deployment with token auto-mounting disabled if `serviceAccount.automountServiceAccountToken` is false
     set:
